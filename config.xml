@@ -79,7 +79,7 @@
     <plugin name="cordova-plugin-network-information"/>
     <plugin name="cordova-plugin-splashscreen" />
     <plugin name="cordova-plugin-vibration"/>
-    <plugin name="cordova-plugin-fcm-config" spec="cordova-plugin-fcm-config" />
+    <plugin name="cordova-plugin-fcm-config"/>
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     <!--
