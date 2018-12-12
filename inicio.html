@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inicio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="css/estilosTabla.css">
+    <link rel="stylesheet" type="text/css" href="css/onsenui.css">
+    <link rel="stylesheet" type="text/css" href="css/old-onsen-css-components.min.css">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href="css/mobile-style.css" rel="stylesheet" media="screen">
+    <script src="js/onsenui.min.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="toolbar toolbar--material">
+        <div class="toolbar__left toolbar--material__left">
+            <span class="toolbar-button toolbar-button--material_left" onclick="reporte()">
+                <i class="zmdi zmdi-alert-circle-o zmdi-hc-lg " style="color:white;"></i>
+            </span>
+
+        </div>
+        <div class="toolbar__left toolbar__center" style="color:white; font-size: 25px;">ClassHub</div>
+
+        <div class="toolbar__right toolbar--material__right">
+            <span class="toolbar-button toolbar-button--material_right" onclick="logout()">
+                <i class="zmdi zmdi-power zmdi-hc-lg " style="color:white;"></i>
+            </span>
+        </div>
+    </div>
+
+    <div id="contenido" class="contenido">
+
+        <!-- Carrusel -->
+        <ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel">
+
+            <!-- Item Carrusel (Transporte)-->
+            <ons-carousel-item>
+                <ons-card style="height: 95%; margin-top: 15px;">
+                    <center>
+                        <h4>Horarios de Transporte</h4>
+                    </center>
+                    <!-- Item tarjeta -->
+                    <ons-card style="height: 30%; background: rgba(0,0,0,.02); margin-top: 30px;">
+                        <center>Juriquilla - CU</center>
+                        <p id="horariosCJ"></p>
+                    </ons-card>
+                    <!-- Item tarjeta -->
+                    <ons-card style="height: 30%; background: rgba(0,0,0,.02); margin-top: 30px;">
+
+                        <center>
+                            CU - Juriquilla
+                        </center>
+                        <!-- Horarios -->
+                        <p id="horariosJC"></p>
+                    </ons-card>
+                </ons-card>
+            </ons-carousel-item>
+
+            <!-- Item Carrusel (Clases) -->
+            <ons-carousel-item>
+                <ons-card style="height: 95%; margin-top: 15px; overflow-y: scroll;">
+                    <!-- Item tarjeta -->
+                    <center>
+                        <h4>Horarios de Clases</h4>
+                        <ons-search-input placeholder="Busca tu clase..." onchange="buscarClase(this.value)"></ons-search-input>
+                        <br><br>
+
+                        <div id="clasesBuscadas">
+                           
+                            
+                        </div>
+                    </center>
+                </ons-card>
+            </ons-carousel-item>
+
+            <!-- Item Carrusel (Tutores) -->
+            <ons-carousel-item>
+                <ons-card id='todostutores' style="height: 95%; margin-top: 15px; overflow-y:scroll; ">
+                    <center>
+                        <h4>Tutores</h4>
+                    </center>
+                    <br><br>
+
+
+                </ons-card>
+                </ons-card>
+            </ons-carousel-item>
+        </ons-carousel>
+
+    </div>
+
+
+    <div class="tabbar">
+        <label class="tabbar__item" onclick="calendario()">
+            <input type="radio" name="tabbar-b" checked="checked">
+            <button class="tabbar__button">
+                <i class="zmdi zmdi-calendar zmdi-hc-lg"></i>
+            </button>
+        </label>
+
+        <label class="tabbar__item" onclick="foro()">
+            <input type="radio" name="tabbar-b" checked="checked">
+            <button class="tabbar__button">
+                <i class="zmdi zmdi-comments zmdi-hc-lg"></i>
+            </button>
+        </label>
+
+        <label class="tabbar__item" onclick="horarios()">
+            <input type="radio" name="tabbar-b" checked="checked">
+            <button class="tabbar__button">
+                <i class="zmdi zmdi-time zmdi-hc-lg"></i>
+            </button>
+        </label>
+
+        <label class="tabbar__item" onclick="convocatorias()">
+            <input type="radio" name="tabbar-b">
+            <button class="tabbar__button">
+                <i class="zmdi zmdi-money zmdi-hc-lg"></i>
+            </button>
+        </label>
+
+    </div>
+
+    <script>
+        // Funcion verificaSesion() al inicializar la ventana
+        window.addEventListener('load', verificaSesion, true);
+        window.addEventListener('load', cargarInfoH, true);
+        window.addEventListener('load', cargarTutores, true);
+    </script>
+    <script type='text/javascript' src='js/imgur.js'></script>
+    <script type='text/javascript' src='js/upload.js'></script>
+</body>
+
+</html>
