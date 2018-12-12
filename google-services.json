@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "96282850922",
+    "firebase_url": "https://classhub-e3342.firebaseio.com",
+    "project_id": "classhub-e3342",
+    "storage_bucket": "classhub-e3342.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96282850922:android:d1fa72bb03aabd72",
+        "android_client_info": {
+          "package_name": "com.classh.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "96282850922-ao3ica7rq8nv2f9ogl1iok7tc7l1jmrs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCojTcOqV-zy_x-HR6zZXZXk7fN8zZy6mc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
